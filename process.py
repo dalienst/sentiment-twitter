@@ -61,4 +61,4 @@ data = data[data["processed_text"].astype(bool)]
 print(data[["post_text", "processed_text", "label"]].head())
 
 # Save the preprocessed data to a new CSV file
-# data[["processed_text", "label"]].to_csv("process_data.csv", index=False)
+data[["processed_text", "label"]].to_csv("processed_data.csv", index=False)
