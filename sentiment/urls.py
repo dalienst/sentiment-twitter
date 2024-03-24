@@ -17,9 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from sentimental.views import index
+from sentimental.views import predict_depression
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index, name="index"),
+    path("", predict_depression, name="index"),
 ]
