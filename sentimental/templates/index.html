@@ -22,7 +22,7 @@
                     {% if messages %}
                     <div class="alert alert-dismissible fade show" role="alert">
                         {% for message in messages %}
-                        <p{% if message.tags %} class="alert-{{ message.tags }}" {% endif %}>{{ message }}</p>
+                        <p{% if message.tags %} class="alert-{{ message.tags }} bg-success text-light p-2" {% endif %}>{{ message }}</p>
                             {% endfor %}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
