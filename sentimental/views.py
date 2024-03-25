@@ -32,8 +32,8 @@ def predict_depression(request):
         if form.is_valid():
             tweet = form.cleaned_data["tweet"]
             sentiment = predict_sentiment(tweet)
-            sentiment_message = "Positive" if sentiment == 0 else "Negative"
-            messages.success(request, f"Prediction result: {sentiment_message}")
+            # sentiment_message = "Positive" if sentiment == 0 else "Negative" 
+            messages.success(request, f"Prediction result: {sentiment}")
             # Clear the form data
             form = TweetForm()
             return render(request, "index.html", {"form": form})
