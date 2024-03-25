@@ -34,9 +34,9 @@ def predict_depression(request):
             sentiment = predict_sentiment(tweet)
             # sentiment_message = "Positive" if sentiment == 0 else "Negative" 
             if sentiment == 0:
-                sentiment = "Positive"
-            else:
                 sentiment = "Negative"
+            else:
+                sentiment = "Positive"
             messages.success(request, f"Prediction result: {sentiment}")
             # Clear the form data
             form = TweetForm()
